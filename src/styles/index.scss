@@ -11,20 +11,16 @@ body {
   padding: 0;
 }
 
-header {
-  font-family: Roboto, serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
 .header {
-  height: 60px;
+  @include roboto500;
+
+  height: $header-height;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
-  background-color: #fff;
+  padding: 0 $header-padding-x;
+  background-color: $color-white;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 
   &__link {
@@ -34,7 +30,7 @@ header {
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: $color-primary;
 }
 
 .is-active::after {
@@ -44,7 +40,7 @@ header {
   left: 0;
   right: 0;
   height: 4px;
-  background-color: #00acdc;
+  background-color: $color-primary;
 }
 
 main {
@@ -57,28 +53,27 @@ main {
 }
 
 .catalog {
-  justify-content: center;
   display: grid;
-  grid-template-columns: repeat(1, 200px);
-  gap: 46px 48px;
+  grid-template-columns: repeat(1, $card-width);
+  gap: $catalog-gap-row $catalog-gap-col;
   margin: 0;
   box-sizing: border-box;
 }
 
 @media (min-width: 488px) {
   .catalog {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, $card-width);
   }
 }
 
 @media (min-width: 768px) {
   .catalog {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, $card-width);
   }
 }
 
 @media (min-width: 1024px) {
   .catalog {
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, $card-width);
   }
 }

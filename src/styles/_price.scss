@@ -8,14 +8,14 @@
   &__text {
     @include roboto400;
 
-    color: #616070;
+    color: $color-muted;
     font-size: 12px;
   }
 
   &__sum {
     @include roboto700;
 
-    color: #060b35;
+    color: $color-text;
     line-height: 18px;
     font-size: 16px;
   }

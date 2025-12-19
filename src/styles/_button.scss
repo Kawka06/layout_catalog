@@ -2,23 +2,31 @@
   @include center;
   @include roboto700;
 
-  height: 40px;
+  height: $button-height;
   width: 100%;
   margin-top: 16px;
-  border-radius: 5px;
-  border-color: 1px solid #00acdc;
+  border-radius: $card-radius;
+
+  border: 1px solid $color-primary;
   text-decoration: none;
   cursor: pointer;
+
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
-  color: #fff;
-  background-color: #00acdc;
+
+  color: $color-white;
+  background-color: $color-primary;
+
   box-sizing: border-box;
 
+  transition:
+    background-color $transition-time,
+    color $transition-time,
+    border-color $transition-time;
+
   &:hover {
-    background-color: #fff;
-    border: 1px solid #00acdc;
-    color: #00acdc;
+    background-color: $color-white;
+    color: $color-primary;
   }
 }
