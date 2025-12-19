@@ -15,16 +15,21 @@ body {
   @include roboto500;
 
   height: $header-height;
-  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding: 0 $header-padding-x;
   background-color: $color-white;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 
   &__link {
-    height: 40px;
+    height: $button-height;
+  }
+
+  &__logo {
+    height: 100%;
+    display: block;
   }
 }
 
@@ -36,27 +41,22 @@ body {
 .is-active::after {
   content: '';
   position: absolute;
-  bottom: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  bottom: 0;
+  height: $space-xs;
   background-color: $color-primary;
 }
 
-main {
+/* main = catalog container */
+.catalog {
   @include roboto400;
 
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 50px 40px;
-}
+  padding: $catalog-padding-y $catalog-padding-x;
 
-.catalog {
   display: grid;
   grid-template-columns: repeat(1, $card-width);
-  gap: $catalog-gap-row $catalog-gap-col;
-  margin: 0;
+  gap: $catalog-gap-y $catalog-gap-x;
   box-sizing: border-box;
 }
 

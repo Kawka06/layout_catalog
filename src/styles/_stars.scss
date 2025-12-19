@@ -2,20 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  line-height: 16px;
+
   width: 100%;
-  margin-top: 16px;
+  margin-top: $card-padding;
+  line-height: $line-height-m;
 
   &__list {
     display: flex;
     align-items: center;
-    justify-content: center;
   }
 
   &__star {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
+    width: $card-padding; // 16px
+    height: $card-padding; // 16px
+    margin-right: $space-xs;
+
     background-image: url('../images/star-active.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -28,8 +29,8 @@
   &__reviews {
     @include roboto400;
 
-    line-height: 14px;
+    font-size: $font-size-s;
+    line-height: $line-height-s;
     color: $color-text;
-    font-size: 10px;
   }
 }

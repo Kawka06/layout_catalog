@@ -12,7 +12,7 @@
   }
 
   &__element {
-    margin-left: 20px;
+    margin-left: $space-m;
   }
 
   &__element:first-child {
@@ -22,7 +22,7 @@
   &__link {
     color: $color-text;
     text-decoration: none;
-    font-size: 12px;
+    font-size: $font-size-m;
     line-height: $header-height;
     display: inline-block;
 

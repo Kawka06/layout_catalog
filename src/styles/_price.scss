@@ -2,21 +2,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 24px;
+
   width: 100%;
+  margin-top: $space-l;
 
   &__text {
     @include roboto400;
 
     color: $color-muted;
-    font-size: 12px;
+    font-size: $font-size-m;
   }
 
   &__sum {
     @include roboto700;
 
     color: $color-text;
-    line-height: 18px;
-    font-size: 16px;
+    font-size: $font-size-xl;
+    line-height: $line-height-l;
   }
 }
